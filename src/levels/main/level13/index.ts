@@ -11,7 +11,7 @@ export default {
     "SELECT\n" +
     "  name,\n" +
     "  CASE WHEN (age > 60) THEN '老同学'\n" +
-    "       WHEN (age > 20) THEN '年轻'\n" +
+    "       WHEN (age > 20 or age is null) THEN '年轻'\n" +
     "       ELSE '小同学' END AS age_level\n" +
     "FROM\n" +
     "  student\n" +
